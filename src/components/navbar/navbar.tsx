@@ -86,29 +86,19 @@ export default function Navbar() {
           }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => {
-                const start = window.scrollY;
-                animate(start, 0, {
-                  duration: 1.2,
-                  ease: [0.22, 1, 0.36, 1],
-                  onUpdate: (v) => window.scrollTo(0, v),
-                });
-              }}
-              className="cursor-pointer"
-            >
-              <AppIcon />
-            </button>
-            <a
-              href="https://byaxel.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground font-normal text-xs tracking-wide hover:opacity-70 transition-opacity duration-300"
-            >
-              byaxel
-            </a>
-          </div>
+          <button
+            onClick={() => {
+              const start = window.scrollY;
+              animate(start, 0, {
+                duration: 1.2,
+                ease: [0.22, 1, 0.36, 1],
+                onUpdate: (v) => window.scrollTo(0, v),
+              });
+            }}
+            className="cursor-pointer"
+          >
+            <AppIcon />
+          </button>
         </motion.div>
 
         {/* App Store badge */}
